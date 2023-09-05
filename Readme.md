@@ -3,17 +3,48 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T190498)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+#  WinForms Data Grid - Configure the SQL Data Source and bind it to the grid
+
+This example demonstrates how:
+
+* Crete and configure the SqlDataSource component
+  
+  ```csharp
+  private static SqlDataSource InitData() {
+      MsSqlConnectionParameters connectionParameters = new MsSqlConnectionParameters("localhost", "nwind.mdf", "username", "password", MsSqlAuthorizationType.SqlServer);
+      SqlDataSource ds = new SqlDataSource(connectionParameters);
+      CustomSqlQuery query = new CustomSqlQuery();
+      query.Name = "customQuery1";
+      query.Sql = "SELECT * FROM Products";
+      ds.Queries.Add(query);
+      ds.Fill();
+      return ds;
+  }
+  ```
+* Bind the `GridControl` to a Microsoft SQL Server database.
+
+```csharp
+  private void Init() {
+      SqlDataSource ds = InitData();
+      Grid.DataSource = ds;
+      Grid.DataMember = "customQuery1";
+  }
+```
+
+
+## Files to Review
 
 * [Form1.cs](./CS/dxSample/Form1.cs) (VB: [Form1.vb](./VB/dxSample/Form1.vb))
-* [Program.cs](./CS/dxSample/Program.cs) (VB: [Program.vb](./VB/dxSample/Program.vb))
-<!-- default file list end -->
-#  How to configure the SQL Data Source component in code to bind the GridControl to a database
 
 
-This example demonstrates how to bind the GridControl to a Microsoft SQL Server database through the SqlDataSource component in code. See the <a href="https://www.devexpress.com/Support/Center/p/T190494">How to use the SQL Data Source component to bind GridControl to a database at design time</a> KB article for more information.<br /><br />See also:<br /><a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument18167">Binding to SQL Data</a>
+## Documentation
 
-<br/>
+* [Binding to SQL Data](https://docs.devexpress.com/WindowsForms/18167/common-features/data-binding/binding-to-sql-data)
+* [Data Binding - WinForms Data Grid](https://docs.devexpress.com/WindowsForms/634/controls-and-libraries/data-grid/data-binding)
 
 
+## See Also
+
+* [How to use the SqlDataSource component to provide data for the GridControl at design time](https://supportcenter.devexpress.com/ticket/details/t190494/how-to-use-the-sqldatasource-component-to-provide-data-for-the-gridcontrol-at-design-time)
+* [Data Binding - DevExpress WinForms Troubleshooting﻿](https://supportcenter.devexpress.com/ticket/details/t925839/devexpress-winforms-troubleshooting-data-binding)
