@@ -6,9 +6,9 @@
 
 #  WinForms Data Grid - Configure the SQL Data Source and bind it to the grid
 
-This example demonstrates how:
+This example demonstrates how to:
 
-* Crete and configure the SqlDataSource component
+* Create and configure the SqlDataSource component
   
   ```csharp
   private static SqlDataSource InitData() {
