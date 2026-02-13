@@ -50,7 +50,7 @@ This example demonstrates how to:
 * [How to use the SqlDataSource component to provide data for the GridControl at design time](https://supportcenter.devexpress.com/ticket/details/t190494/how-to-use-the-sqldatasource-component-to-provide-data-for-the-gridcontrol-at-design-time)
 * [Data Binding - DevExpress WinForms Troubleshooting﻿](https://supportcenter.devexpress.com/ticket/details/t925839/devexpress-winforms-troubleshooting-data-binding)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-create-configure-sql-data-source&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-create-configure-sql-data-source&~~~was_helpful=no)
 
